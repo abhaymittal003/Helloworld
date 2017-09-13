@@ -1,1 +1,16 @@
-this is for test 
+---
+ - hosts: localhost
+   gather_facts: False
+   tasks:
+   - name : create New Vnett
+     azure_rm_virtualnetwork:
+       resource_group: rgansible
+       name: rgansiblevnet
+       address_prefixes: "30.30.0.0/16"
+   - name: Add subnet
+     azure_rm_subnet:
+       resource_group: rgansible
+       name: rgansiblesubnet1
+       address_prefix: "30.30.1.0/24"
+       virtual_network: rgansiblevnet  
+...
