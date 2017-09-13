@@ -1,0 +1,21 @@
+Started by an SCM change
+Building in workspace /home/rhelos/.jenkins/workspace/HelloWorld
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/abhaymittal003/Helloworld.git # timeout=10
+Fetching upstream changes from https://github.com/abhaymittal003/Helloworld.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/abhaymittal003/Helloworld.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 5ef5e803b1bc353c1ac9f7d48c3f455776a5143d (refs/remotes/origin/master)
+Commit message: "Create newtestfile.yml"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5ef5e803b1bc353c1ac9f7d48c3f455776a5143d
+ > git rev-list cdb4601103140c63bbf4ada40d79354f8e58b8c4 # timeout=10
+[HelloWorld] $ /bin/sh -xe /tmp/jenkins8389248581947367674.sh
++ git pull origin master
+From https://github.com/abhaymittal003/Helloworld
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+Finished: SUCCESS
